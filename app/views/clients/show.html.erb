@@ -1,0 +1,13 @@
+<p>
+  <strong>Nombre Cliente:</strong>
+  <%= @client.nombre_cliente %>
+</p>
+
+<p>
+  <strong>Firma del Cliente:</strong>
+  <% if @client.firma_del_cliente.attached? %>
+    <%= image_tag @client.firma_del_cliente %>
+  <% else %>
+    No hay firma disponible
+  <% end %>
+</p>

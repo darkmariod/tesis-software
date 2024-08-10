@@ -1,0 +1,43 @@
+<!-- app/views/clients/_form.html.erb -->
+<%= form_with(model: client, local: true, html: { multipart: true }) do |form| %>
+  <%= form.label :nombre_cliente %>
+  <%= form.text_field :nombre_cliente %>
+
+  <%= form.label :codigo_cliente %>
+  <%= form.text_field :codigo_cliente %>
+
+  <%= form.label :ruc %>
+  <%= form.text_field :ruc %>
+
+  <%= form.label :direccion %>
+  <%= form.text_field :direccion %>
+
+  <%= form.label :telefono %>
+  <%= form.text_field :telefono %>
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :fecha_falla_del_equipo %>
+  <%= form.date_field :fecha_falla_del_equipo %>
+
+  <%= form.label :tecnico_a_cargo %>
+  <%= form.text_field :tecnico_a_cargo %>
+
+  <%= form.label :hora_de_inicio %>
+  <%= form.time_field :hora_de_inicio %>
+
+  <%= form.label :hora_final %>
+  <%= form.time_field :hora_final %>
+
+  <%= form.label :trabajo_realizado %>
+  <%= form.text_area :trabajo_realizado %>
+
+  <%= form.label :observaciones_del_tecnico %>
+  <%= form.text_area :observaciones_del_tecnico %>
+
+  <%= form.label :firma_del_cliente %>
+  <%= form.file_field :firma_del_cliente %>
+
+  <%= form.submit %>
+<% end %>

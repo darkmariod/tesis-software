@@ -1,0 +1,30 @@
+<%= form_with(model: product, local: true, html: { multipart: true }) do |form| %>
+  <%= form.label :codigo %>
+  <%= form.text_field :codigo %>
+
+  <%= form.label :nombre %>
+  <%= form.text_field :nombre %>
+
+  <%= form.label :descripcion %>
+  <%= form.text_area :descripcion %>
+
+  <%= form.label :color %>
+  <%= form.text_field :color %>
+
+  <%= form.label :precio %>
+  <%= form.number_field :precio, step: 0.01 %>
+
+  <%= form.label :cantidad %>
+  <%= form.number_field :cantidad %>
+
+  <%= form.label :cantidad_minima %>
+  <%= form.number_field :cantidad_minima %>
+
+  <%= form.label :imagen %>
+  <%= form.file_field :imagen %>
+
+  <%= form.label :category_id, "Category" %>
+  <%= form.collection_select :category_id, Category.all, :id, :nombre, prompt: "Select Category" %>
+
+  <%= form.submit %>
+<% end %>
